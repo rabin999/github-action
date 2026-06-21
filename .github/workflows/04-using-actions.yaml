@@ -5,6 +5,9 @@ on: push
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults:
+            run: 
+                working-directory: react-app
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
@@ -14,4 +17,6 @@ jobs:
                 node-version: '20.x'
             - name: Install dependencies
               run: npm ci
-              working-directory: react-app
+            #   working-directory: react-app - uses above job level working directory
+            - name: Run Unit tests
+              run: npm run test
