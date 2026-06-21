@@ -14,9 +14,9 @@ jobs:
                 docker --version
                 git --version
                 node --version
-
+                
     windows-echo:
-        runs-on: windows-latests
+        runs-on: windows-latest
         steps:
             - name: Show Os
               shell: bash
