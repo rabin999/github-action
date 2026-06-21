@@ -10,3 +10,11 @@ jobs:
               run : |
                 echo "This job is running on an Ubuntu runner."
                 echo "Runner OS: $RUNNER_OS"
+                echo "Action: $GITHUB_ACTION"
+    windows-echo:
+        runs-on: window-latest
+        steps:
+            - name: Show Os
+              run: |
+                echo "This job is running on Windows runner."
+                echo "Runner OS: $RUNNER_OS"
