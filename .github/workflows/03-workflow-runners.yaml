@@ -11,8 +11,12 @@ jobs:
                 echo "This job is running on an Ubuntu runner."
                 echo "Runner OS: $RUNNER_OS"
                 echo "Action: $GITHUB_ACTION"
+                docker --version
+                git --version
+                node --version
+
     windows-echo:
-        runs-on: windows-latest
+        runs-on: windows-latests
         steps:
             - name: Show Os
               shell: bash
