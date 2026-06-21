@@ -1,6 +1,11 @@
 name: 02 - Workflow Events
 
-on: push
+on: 
+    push:
+    pull_request:
+    schedule:
+        - cron: '*/5 * * * *'
+    workflow_dispatch:
 
 jobs:
     echo:
@@ -9,9 +14,9 @@ jobs:
             - name: Show the trigger
               run: | 
                 echo "I've been triggered by a(n) ${{ github.event_name }}"
-                echo "detail ${{ github.action_path }}"
+                echo "detail -> ${{ github.action_path }}"
                 pwd
                 ls -lat
-                echo "detail ${{ github.action_status }}"
-                echo "detail ${{ github.env }}"
-                echo "detail ${{ github.repository }}"
+                echo "detail -> ${{ github }}"
+                echo "detail -> ${{ github.env }}"
+                echo "detail -> ${{ github.repository }}"
