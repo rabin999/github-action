@@ -1,4 +1,4 @@
-# github-action
+# Learning Github Action
 
 - workflows are defined at repository level
 - a VM is scoped to a job: steps share the VM, but jobs dont't (by default, each job receives a clean VM instances)
