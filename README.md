@@ -4,3 +4,5 @@
 - a VM is scoped to a job: steps share the VM, but jobs dont't (by default, each job receives a clean VM instances)
 - job runners might have pre installed softwares, packages you might need so check before install
 - by using predefined actions in steps, it avoids repetive and extensive commands
+- if multiple filters are specified, all of them must be satisfied for the workflow to run!
+- there will be defualt activity types applied to event
